@@ -1,0 +1,308 @@
+<html >
+<head>
+<style>
+
+body {
+background-color:#00CC99;	
+    font-size: 28px;
+}
+.header{
+padding-left:18px;
+
+padding-right:18px;}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+</style>
+<style>
+.vertical-menu {
+
+float:left;
+}
+
+
+.vertical-menu a {
+
+    background-color:#012D58;
+    color: white;
+    display:block;
+    padding: 12px;
+        text-decoration: none;
+	height:30px;
+	width:13%;
+	    
+}
+
+.vertical-menu a:hover {
+    background-color: #eee;.
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+    height:10px;
+	border:white;
+}
+
+
+
+.rst{
+height:12px;
+margin:15px;
+}
+table{
+height:10%;
+border-spacing: 10px;
+
+}
+.tblLogin {
+align:center;
+	border: #95bee6 1px solid;
+    background: #d1e8ff;
+    border-radius: 4px;
+    max-width: 300px;
+	padding:20px 30px 30px;
+	text-align:center;
+}
+.tableheader { font-size: 20px; }
+.tablerow { padding:100px; }
+.error_message {
+	color: #b12d2d;
+    background: #ffb5b5;
+    border: #c76969 1px solid;
+}
+.message {
+	width: 100%;
+    max-width: 300px;
+    padding: 10px 30px;
+    border-radius: 4px;
+    margin-bottom: 5px;    
+}
+.login-input {
+	border: #CCC 1px solid;
+    padding: 10px 20px;
+	border-radius:4px;
+
+
+}
+.btnSubmit {
+	padding: 10px 20px;
+    background: #2c7ac5;
+    border: #d1e8ff 1px solid;
+    color: #FFF;
+	border-radius:4px;
+
+}
+.tooltip {
+    
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+</style>
+<title>Register</title></head>
+<body>
+<div class="header">
+  <img src="th1.png" height="100" width="100%">
+</div>
+
+<ul>
+  <li><a class="active" href="currentpolls.php">Home</a></li>
+  <li><a href="About.php">About</a></li>
+  <li><a href="vote.php">Current polls</a></li>
+
+</ul>
+<div width="100px" height="100px">
+
+<div align="center">
+<div class="tablerow">	
+<div class="tbllogin">
+
+<form action="reg.php" method="post">
+<div class="tooltip">
+<input class="login-input" placeholder="Enter your name" type="text" name="name" required>
+ <span class="tooltiptext">Enter your Name</span>
+</div><br>
+<div class="tooltip">
+<input class="login-input" placeholder="12 DIGIT AADHAR NUMBER"  type="number" maxLength="12" min="111111111111" max="999999999999" name="aad" id="aad" required > <span class="tooltiptext">Enter AAdhar card number</span></div><br>
+<div class="tooltip">
+<input type="date" class="login-input" name="bday"  max="2000-01-01" required> <span class="tooltiptext" >Date of Birth</span></div><br>
+<div class="tooltip">
+<input class="login-input" placeholder="MOBILE NUMBER"  type="number" maxLength="10" min="1111111111" max="9999999999" id="mob" name="mob" required> <span class="tooltiptext">Mobile number</span></div><br>
+<div class="tooltip">
+<input class="login-input" placeholder="PASSWORD" id="psw" type="password" maxLength="32" name="psw" required> <span class="tooltiptext">PASSWORD</span></div><br>
+
+<style>
+#message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+//    position: relative; 
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+
+
+}
+</style>
+<div class="tooltip">
+<input class="login-input" placeholder="RE-Enter PASSWORD" type="password" maxLength="32" name="re" > <span class="tooltiptext">RE-ENTER PASSWORD</span></div><br>
+
+
+<input class="btnSubmit" type="submit"/>
+<div id="message">
+  <h3>Password must contain the following:</h3>
+  <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+  <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+  <p id="number" class="invalid">A <b>number</b></p>
+  <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+</div>
+
+
+				
+<script>
+var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+<br>
+
+    <p>
+       Already a member?<a href="logini.php">sign in</a>
+    </p>
+
+</form>
+</div></div>
+
+</div>
+
+
+</div>
+
+
+
+</body>
+</html>
